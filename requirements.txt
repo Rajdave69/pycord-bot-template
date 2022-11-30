@@ -1,2 +1,23 @@
+#   _____  _                       _   ____        _     _______                   _       _
+#  |  __ \(_)                     | | |  _ \      | |   |__   __|                 | |     | |
+#  | |  | |_ ___  ___ ___  _ __ __| | | |_) | ___ | |_     | | ___ _ __ ___  _ __ | | __ _| |_ ___
+#  | |  | | / __|/ __/ _ \| '__/ _` | |  _ < / _ \| __|    | |/ _ \ '_ ` _ \| '_ \| |/ _` | __/ _ \
+#  | |__| | \__ \ (_| (_) | | | (_| | | |_) | (_) | |_     | |  __/ | | | | | |_) | | (_| | ||  __/
+#  |_____/|_|___/\___\___/|_|  \__,_| |____/ \___/ \__|    |_|\___|_| |_| |_| .__/|_|\__,_|\__\___|
+#                                                                           | |
+#                                                                           |_|
+#
+# Welcome to Raj's Discord Bot Template
+#
+# This template is designed to be a starting point for your own Discord bot.
+# Made by RajDave69 on GitHub.
+#
+#
+# This is the requirements.txt file.
+# It contains all the modules that are required for the bot to run.
+# You can install all the modules by running the command "pip install -r requirements.txt"
+#
+
+
 colorlog==6.7.0
 py-cord>=2.3.1
