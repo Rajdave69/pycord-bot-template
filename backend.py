@@ -80,6 +80,23 @@ else:
 # Initializing the client
 client = commands.Bot(intents=intents)  # Setting prefix
 
+_embed_template = discord.Embed(
+    title="Error!",
+    color=embed_color,
+    url=embed_url
+)
+
+_error_template = discord.Embed(
+    color=0xff0000,
+    url=embed_url
+)
+
+_embed_template.set_footer(text=embed_footer)
+_error_template.set_footer(text=embed_footer)
+
+embed_template = lambda: _embed_template.copy()
+error_template = lambda description: _error_template.copy().description(description)
+
 
 # Add your own functions and variables here
 # Happy coding! :D

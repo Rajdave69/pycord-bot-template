@@ -24,7 +24,7 @@ import discord
 from discord.ext import commands
 
 # Importing our custom variables/functions from backend.py
-from backend import log, embed_url, embed_color, embed_footer
+from backend import log, embed_template, error_template
 
 
 class Example(commands.Cog):
@@ -45,14 +45,15 @@ class Example(commands.Cog):
 
     @commands.slash_command(name="testembed", description="Sends a test embed")
     async def test_embed(self, ctx):
-        embed = discord.Embed(
-            title="Test Embed",
-            description="This is a test embed.",
-            color=embed_color,
-            url=embed_url
-        )
-        embed.set_footer(text=embed_footer)
+        embed = embed_template
+        embed.title = "Test Embed"
+        embed.description = "This is a test embed."
         await ctx.respond(embed=embed)
+
+    @commands.slash_command(name="testembed2", description="Sends a test embed")
+    async def test_embed2(self, ctx):
+        error_embed = error_template("Oops! Something went wrong!")
+        await ctx.respond(embed=error_embed)
 
 
 # The `setup` function is required for the cog to work
