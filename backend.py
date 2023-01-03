@@ -85,18 +85,21 @@ _embed_template = discord.Embed(
     color=embed_color,
     url=embed_url
 )
-
-_error_template = discord.Embed(
-    color=0xff0000,
-    url=embed_url
-)
-
 _embed_template.set_footer(text=embed_footer)
-_error_template.set_footer(text=embed_footer)
 
 embed_template = lambda: _embed_template.copy()
-error_template = lambda description: _error_template.copy().description(description)
 
+
+def error_template(description: str) -> discord.Embed:
+    _error_template = discord.Embed(
+        title="Error!",
+        description=description,
+        color=0xff0000,
+        url=embed_url
+    )
+    _error_template.set_footer(text=embed_footer)
+
+    return _error_template.copy()
 
 # Add your own functions and variables here
 # Happy coding! :D
